@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    color: #555;
+    display: inline;
+    /* 确保 h2 和按钮在同一行 */
+    margin-right: 10px;
+}
+
+button {
+    background-color: #40b7a9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+    /* 避免文字换行 */
+}
+
+button:hover {
+    background-color: #5fc9cd;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 70%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* 水平居中 */
+}
+
+#auth,
+#chatroom {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#auth {
+    width: 460px;
+}
+
+#chatroom {
+    width: 500px;
+}
+
+#messages {
+    border: 1px solid #ccc;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#messages div {
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#messageInput {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#input-container {
+    display: flex;
+    align-items: center;
+}
+
+#header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#chatroom button {
+    width: auto;
+    /* 使按钮宽度自适应内容 */
+    vertical-align: top;
+}
+
+/* 登录页面按钮布局 */
+#button-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#button-container button {
+    width: 100px;
+    margin: 0 10px;
+}

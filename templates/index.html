@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat Room</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="/static/chat.js" defer></script>
+</head>
+
+<body>
+    <div id="chatroom">
+        <h1>WebSocket Chat Room</h1>
+        <div id="header-container">
+            <h2 id="userGreet">Welcome ~ </h2>
+            <button onclick="logoutHandle()">LogOut</button>
+        </div>
+        <div id="messages"></div>
+        <div id="input-container">
+            <input type="text" id="messageInput" autocomplete="off" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</body>
+
+</html>

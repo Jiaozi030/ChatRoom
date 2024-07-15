@@ -63,7 +63,7 @@ function addOneMessage(data) {
 
 
 function startWebSocket() {
-    ws = new WebSocket(`ws://192.168.1.17:8000/ws/${accessToken}`);
+    ws = new WebSocket(`ws://0.0.0.0:8000/ws/${accessToken}`);
     ws.onmessage = function(event) {
         addOneMessage(event.data)
     };

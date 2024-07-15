@@ -21,7 +21,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 # 挂载静态文件目录
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
@@ -154,12 +153,10 @@ async def websocket_endpoint(websocket: WebSocket, token: str, db: Session = Dep
         await manager.broadcast(f"用户{username}退出了聊天室")
 
 
-
 @app.get("/login", response_class=HTMLResponse)
 async def loginHandle(request: Request):
     with open("templates/login.html", "r", encoding='utf-8') as file:
         return HTMLResponse(content=file.read(), status_code=200)
-
 
 
 @app.post("/logout")
@@ -219,4 +216,5 @@ async def indexHandle(request: Request):
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
